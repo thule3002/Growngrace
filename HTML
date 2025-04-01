@@ -1,1 +1,67 @@
-<form action=”submit.asp” method=”GET”>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow & Grace - Empower Your Beauty</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Glow & Grace</h1>
+        <p>Empowering beauty with confidence</p>
+    </header>
+
+    <!-- Company Info Section -->
+    <section id="company-info">
+        <h2>About Us</h2>
+        <p>At Glow & Grace, we believe that beauty is empowerment. Our mission is to provide high-quality, luxurious beauty products that enhance your natural glow and confidence. From skincare to cosmetics and fragrances, we are dedicated to bringing you carefully curated products that inspire self-love, elegance, and grace.</p>
+        <p>With a passion for beauty and a commitment to excellence, Glow & Grace is more than just a brand – it’s a community that celebrates confidence, individuality, and timeless elegance.</p>
+        <p><strong>💖 Glow with confidence. Grace with beauty.</strong></p>
+    </section>
+
+    <!-- Product Section -->
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product">
+            <img src="product1.jpg" alt="Dior Foundation">
+            <p><strong>Dior Foundation</strong> - $40.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="product2.jpg" alt="Laneige Cushion">
+            <p><strong>Laneige Cushion</strong> - $35.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <!-- More products will go here -->
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="order-form">
+        <h2>Order Form</h2>
+        <form action="save_order.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="product">Choose Product:</label>
+            <select id="product" name="product">
+                <option value="Dior Foundation">Dior Foundation - $40.00</option>
+                <option value="Laneige Cushion">Laneige Cushion - $35.00</option>
+                <!-- More products will go here -->
+            </select><br><br>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required><br><br>
+
+            <input type="submit" value="Submit Order">
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2025 Glow & Grace</p>
+    </footer>
+
+</body>
+</html>
