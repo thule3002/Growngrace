@@ -1,89 +1,81 @@
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
-    margin: 0;
-    padding: 0;
+/* Style the sidebar */
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    color: white;
+    padding-top: 20px;
 }
 
-header {
-    background-color: #f6d8e1;
-    padding: 20px;
+.sidebar h2 {
     text-align: center;
+    font-size: 24px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
-
-nav ul {
-    list-style: none;
+.sidebar ul {
+    list-style-type: none;
     padding: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+.sidebar ul li {
+    text-align: center;
+    padding: 10px;
 }
 
-nav ul li a {
+.sidebar ul li a {
+    color: white;
     text-decoration: none;
-    color: #333;
+    display: block;
 }
 
-section {
-    margin: 20px;
+/* Style the main content */
+.main-content {
+    margin-left: 220px;
     padding: 20px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-    background-color: #f6d8e1;
-    padding: 10px;
+h2 {
     text-align: center;
-}
-
-.product {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
-}
-
-.product img {
-    max-width: 100%;
-    height: auto;
+    margin-bottom: 20px;
 }
 
 form {
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: 600px;
+    margin: auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-form label {
+label {
+    font-weight: bold;
+    margin-top: 10px;
     display: block;
-    margin-bottom: 5px;
 }
 
-form input, form select {
+input, select, textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
+    margin-top: 5px;
     border-radius: 4px;
+    border: 1px solid #ccc;
 }
 
-form button {
-    padding: 10px 15px;
-    background-color: #f6d8e1;
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
 }
 
-form button:hover {
-    background-color: #f4b8b8;
+button:hover {
+    background-color: #218838;
 }
