@@ -1,87 +1,37 @@
-/* Body Background and Text Color */
 body {
-  background: linear-gradient(to right, #f4c2c2, #fad0c4); /* Soft gradient from pink to peach */
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-/* Header Style */
-header {
-  background-color: #f8b0d3; /* Light pink */
-  color: white;
-  padding: 20px;
-  font-size: 2rem;
-  text-align: center;
-  font-weight: bold;
+h1 {
+    color: #FF6347;
 }
 
-/* About Us Section */
-#company-info {
-  background-color: #fff5f8;
-  padding: 40px;
-  font-size: 1.2rem;
-  line-height: 1.6;
+h2, p {
+    color: #333;
 }
 
-/* Products Section */
-#products {
-  display: flex;
-  justify-content: space-around;
-  padding: 40px;
-  background-color: #ffebee;
+.product-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-#products div {
-  width: 30%;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
-  padding: 20px;
-  transition: transform 0.2s ease;
+.product {
+    margin: 0 10px;
 }
 
-#products div:hover {
-  transform: scale(1.05);
+button {
+    background-color: #FF6347;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
 }
 
-#products img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* Order Form Section */
-#order-form {
-  background-color: #ffffff;
-  padding: 20px;
-  margin-top: 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-#order-form input, #order-form select {
-  width: 80%;
-  padding: 10px;
-  margin: 10px;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-#order-form button {
-  padding: 15px 30px;
-  background-color: #f8b0d3;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  color: white;
-  cursor: pointer;
-}
-
-#order-form button:hover {
-  background-color: #f55a9c; /* Darker pink on hover */
+button:hover {
+    background-color: #ff4500;
 }
