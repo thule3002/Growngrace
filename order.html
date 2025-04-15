@@ -4,46 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glow & Grace - Order Form</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>STRAVolution</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
 
-    <header>
-        <h1>Glow & Grace</h1>
-        <p>Empowering beauty with confidence</p>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Our Products</a></li>
-                <li><a href="order.html">Order Form</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="order-form">
+    <!-- Main Content Area -->
+    <div class="main-content">
         <h2>Order Form</h2>
-        <form action="order.php" method="post">
+        <form action="order.php" method="POST">
             <label for="first-name">First Name:</label>
             <input type="text" id="first-name" name="first-name" required>
-            
+
             <label for="last-name">Last Name:</label>
             <input type="text" id="last-name" name="last-name" required>
-            
-            <label for="product">Choose Product:</label>
-            <select id="product" name="product">
-                <option value="Dior Foundation - $40.00">Dior Foundation - $40.00</option>
-                <option value="Laneige Cushion - $35.00">Laneige Cushion - $35.00</option>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="product">Product:</label>
+            <select id="product" name="product" required>
+                <option value="Dior Foundation">Dior Foundation - $40.00</option>
+                <option value="Laneige Cushion">Laneige Cushion - $35.00</option>
             </select>
 
             <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" name="quantity" min="1" required>
+            <input type="number" id="quantity" name="quantity" value="1" min="1" required>
 
-            <button type="submit">Submit Order</button>
+            <label for="address">Shipping Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+
+            <button type="submit">Place Order</button>
         </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Glow & Grace</p>
-    </footer>
+    </div>
 </body>
 </html>
