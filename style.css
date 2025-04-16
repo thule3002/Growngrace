@@ -1,138 +1,47 @@
-/* General styles */
+/* Body and background */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8; /* Light background for the page */
-    margin: 0;
-    padding: 0;
-    color: #333;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #FFB6C1, #FFFFFF); /* Pink to white gradient */
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
 
-/* Header Styles */
-h1 {
-    text-align: center;
-    color: #ff66b2; /* Pink color for header */
-    margin-top: 50px;
+header {
+  background-color: #FFB6C1; /* Light pink */
+  padding: 20px;
+  text-align: center;
 }
 
-h2, h3 {
-    color: #ff3366; /* A deeper shade of pink */
+header h1 {
+  font-size: 3em;
+  color: white;
 }
 
-/* About Us section */
-#about-us {
-    background-color: #f3e6f7; /* Light purple background */
-    padding: 30px;
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+header p {
+  font-size: 1.5em;
+  color: white;
 }
 
-#about-us p {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
+section {
+  padding: 20px;
+  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Slight white background for readability */
+  border-radius: 10px;
 }
 
-#about-us a {
-    color: #ff3366; /* Link color */
-    text-decoration: none;
-    font-weight: bold;
+button {
+  background-color: #FF69B4; /* Hot pink */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-#about-us a:hover {
-    color: #cc0066; /* Darker pink on hover */
+button:hover {
+  background-color: #FF1493; /* Darker pink on hover */
 }
 
-/* Product Section */
-#products {
-    background-color: #ffe6f0; /* Very light pink background */
-    padding: 30px;
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+/* Add any other styles you want to retain */
 
-#products img {
-    width: 100%;
-    max-width: 300px;
-    display: block;
-    margin: 0 auto;
-    border-radius: 8px;
-}
-
-#products h3 {
-    text-align: center;
-    color: #ff3366;
-}
-
-#products .product {
-    background-color: #fff;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-#products .product button {
-    background-color: #ff3366;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#products .product button:hover {
-    background-color: #cc0066;
-}
-
-/* Order Form Styles */
-#order-form {
-    background-color: #f3e6f7; /* Light purple background for order form */
-    padding: 30px;
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#order-form label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: bold;
-}
-
-#order-form input[type="text"],
-#order-form input[type="number"],
-#order-form select {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-#order-form input[type="submit"] {
-    background-color: #ff3366;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#order-form input[type="submit"]:hover {
-    background-color: #cc0066;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #ff3366;
-    color: white;
-    margin-top: 30px;
-}
-
-footer p {
-    font-size: 16px;
-}
