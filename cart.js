@@ -15,7 +15,31 @@ function addToCart(product, price, quantity) {
     // Save the updated cart back to localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(`${product} has been added to your cart!`);
+// Update the cart item counter
+  updateCartCounter();
+  
+  alert(`${product} has been added to your cart!`);
 }
+
+// Function to update the cart counter (number of items in the cart)
+function updateCartCounter() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const cartCounter = document.getElementById('cart-counter');
+  const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+  
+  // Update the cart counter element with the total number of items
+  if (totalItems > 0) {
+    cartCounter.style.display = 'block'; // Show the cart counter if there are items
+    cartCounter.innerHTML = totalItems;  // Set the number of items in the cart
+  } else {
+    cartCounter.style.display = 'none';  // Hide the cart counter if there are no items
+  }
+}
+
+// Call the updateCartCounter function when the page loads to display current cart count
+window.onload = function() {
+  updateCartCounter();
+};
 
 // Function to display cart items on the cart page
 function displayCart() {
