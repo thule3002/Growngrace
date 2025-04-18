@@ -47,9 +47,31 @@ function removeFromCart(product) {
     displayCart(); // Refresh the cart display
 }
 
-// Initialize cart display on page load
+// Function to display cart items on the order page
+function displayOrderSummary() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const orderSummaryContainer = document.getElementById('order-summary');
+  
+  orderSummaryContainer.innerHTML = ""; // Clear the container
+
+  if (cart.length === 0) {
+    orderSummaryContainer.innerHTML = "<p>Your cart is empty!</p>";
+  } else {
+    cart.forEach(item => {
+      const itemElement = document.createElement('div');
+      itemElement.classList.add('order-item');
+      itemElement.innerHTML = `
+        <p>${item.product} - $${item.price} x ${item.quantity}</p>
+      `;
+      orderSummaryContainer.appendChild(itemElement);
+    });
+  }
+}
+
+// Initialize order display on page load
 window.onload = function() {
-    if (document.getElementById('cart-container')) {
-        displayCart(); // Display cart on page load if it's the cart page
-    }
+  if (document.getElementById('order-summary')) {
+    displayOrderSummary(); // Display order summary on page load
+  }
 };
+
