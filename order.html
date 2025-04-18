@@ -38,8 +38,30 @@
           <label for="quantity">Quantity:</label>
           <input type="number" id="quantity" name="quantity" min="1" required>
         </div>
-        <button type="submit">Submit Order</button>
-      </form>
+      <!-- Payment Information -->
+            <div class="payment-info">
+                <h3>Payment Information</h3>
+
+                <div class="form-group">
+                    <label for="credit-card">Credit Card Number:</label>
+                    <input type="text" id="credit-card" name="credit-card" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="expiration">Expiration Date:</label>
+                    <input type="month" id="expiration" name="expiration" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Place Order</button>
+            </div>
+        
     </section>
   </main>
 
