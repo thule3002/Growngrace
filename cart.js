@@ -1,19 +1,4 @@
-// Function to add item to cart
-function addToCart(product, price) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || []; // Get the cart from localStorage or create a new one
-    const existingProduct = cart.find(item => item.product === product);
-
-    if (existingProduct) {
-        existingProduct.quantity += 1; // If product already exists, increase quantity
-    } else {
-        cart.push({ product, price, quantity: 1 }); // Add new product to cart
-    }
-
-    localStorage.setItem('cart', JSON.stringify(cart)); // Save cart back to localStorage
-    alert(`${product} has been added to your cart!`);
-}
-
-// Function to display cart items on cart page
+// Function to display cart items
 function displayCart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartContainer = document.getElementById('cart-container');
