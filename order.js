@@ -14,7 +14,7 @@ window.onload = function () {
       const itemElement = document.createElement('div');
       itemElement.classList.add('order-item');
       itemElement.innerHTML = `
-        <p>${item.product} - $${item.price} x ${item.quantity}</p>
+        <p><strong>${item.product}</strong> x ${item.quantity} - $${item.price * item.quantity}</p>
       `;
       orderSummaryContainer.appendChild(itemElement);
     });
@@ -28,16 +28,15 @@ window.onload = function () {
     orderSummaryContainer.innerHTML = "<p>Your cart is empty!</p>";
   }
 
-  // Pre-fill product info and quantity for the order form
+  // Pre-fill the order form with cart details (product names and quantities)
   if (checkoutCart.length > 0) {
-    // Select the first item to pre-fill (or adjust as needed)
+    // Select the first product to pre-fill the fields
     const product = checkoutCart[0].product;
     const quantity = checkoutCart[0].quantity;
 
-    // Assuming you have inputs like:
-    // Name (empty), Choose Product (filled with the cart product name), Quantity (pre-filled)
+    // Display product name and quantity directly in the form
     document.getElementById('name').value = ''; // Empty name field (user to fill out)
-    document.getElementById('product').value = product; // Default to first cart product
-    document.getElementById('quantity').value = quantity; // Pre-fill with quantity of the first product
+    document.getElementById('product-info').innerHTML = `${product} x ${quantity}`; // Display product name and quantity
+    document.getElementById('total-price').innerHTML = `Total Price: $${totalPrice}`; // Display total price at the top
   }
 }
