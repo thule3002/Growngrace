@@ -1,72 +1,112 @@
-/* Header styles */
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fefbf7; /* Light beige background */
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
 header {
-    background-color: #FFB6C1; /* Light pink */
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #FFB6C1; /* Light pink */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between; /* Distribute space between elements */
+  align-items: center; /* Vertically center the items */
+  position: relative;
 }
 
 header h1 {
-    font-size: 2.5em;
-    color: white;
-    margin: 0;
+  font-size: 2.5em;
+  color: white;
+  margin-left: 20px;
 }
 
-header p {
-    font-size: 1.2em;
-    color: white;
+header nav {
+  display: flex;
+  justify-content: flex-end; /* Align navigation to the right */
 }
 
-/* Navigation bar */
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; /* Align the items to the right */
-    gap: 20px; /* Space between items */
+header nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1.2em;
 }
 
-.navbar a {
-    font-size: 1.1em;
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
+header nav a:hover {
+  text-decoration: underline;
 }
 
-.navbar a:hover {
-    color: #FF69B4; /* A hover color for the links */
+/* Section styles */
+section {
+  padding: 20px;
+  margin: 20px;
+  background-color: #ffffff; /* White background for content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow for content */
+  border-radius: 8px;
 }
 
-.cart-icon {
-    width: 30px;
-    height: 30px;
-    background-color: #FFF;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2em;
-    color: #FFB6C1;
-    cursor: pointer;
+/* Form styles */
+#order-form {
+  background-color: rgba(255, 255, 255, 0.8); /* Slight white background */
+  padding: 30px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Add a background color to the entire page */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #FAF3E0; /* Beige background */
-    margin: 0;
-    padding: 0;
+input[type="text"], input[type="number"], select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
 }
 
-/* Adjust the footer style */
+input[type="submit"] {
+  background-color: #FFB6C1; /* Light pink */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #FF99A1; /* Hover effect */
+}
+
+/* Footer styles */
 footer {
-    background-color: #FFB6C1; /* Light pink */
-    padding: 20px;
-    text-align: center;
-    color: white;
+  background-color: #FFB6C1; /* Light pink for footer */
+  padding: 15px;
+  text-align: center;
 }
 
 footer p {
-    font-size: 1.2em;
-    margin: 0;
+  font-size: 1em;
+  color: white;
+  margin: 0;
+}
+
+/* Cart Item number in icon */
+.cart-item-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #FF6347; /* Red-like color for cart badge */
+  color: white;
+  border-radius: 50%;
+  padding: 3px 10px;
+  font-size: 1.2em;
+  display: none; /* Initially hidden */
+}
+
+.cart-item-count.show {
+  display: inline-block;
 }
