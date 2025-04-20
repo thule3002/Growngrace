@@ -74,3 +74,15 @@ window.onload = function () {
   updateCartCounter();
   displayCart(); // Optionally display cart items on page load
 };
+// Function to proceed to checkout
+function proceedToCheckout() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+
+  // Store cart data and total price in localStorage
+  localStorage.setItem('checkoutCart', JSON.stringify(cart));
+  localStorage.setItem('totalPrice', totalPrice);
+
+  // Redirect to the order form page
+  window.location.href = 'order.html';
+}
