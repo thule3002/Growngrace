@@ -13,24 +13,22 @@ header {
     background-color: #FFB6C1;  /* Pink background for header */
     padding: 20px;
     display: flex;
-    justify-content: center;  /* Centers the content (logo and nav links)
+    justify-content: center;  /* Center logo and nav items */
     align-items: center;
 }
 
 /* Logo in header */
 header .logo {
-    font-size: 9em;
+    font-size: 3em;
     color: white;
     margin: 0; /* Ensures there’s no margin around the title */
     text-align: center;  /* Aligns the logo to the center */
-    text-decoration: none; /* Ensure no underline or decoration is applied */
-    border: none; /* Remove any potential border */
 }
 
 /* Navigation bar styles */
 .nav-links {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center the navigation items */
     gap: 20px;  /* Space between navigation items */
     width: auto; /* Ensure it takes only a certain portion */
 }
