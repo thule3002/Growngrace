@@ -88,6 +88,10 @@ function proceedToCheckout() {
   localStorage.setItem('checkoutCart', JSON.stringify(cart));
   localStorage.setItem('totalPrice', totalPrice);
 
+  function calculateTotalPrice(cart) {
+    return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+}
+
   // Redirect to the order form page
   window.location.href = 'order.html';
 }
