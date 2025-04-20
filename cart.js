@@ -38,7 +38,15 @@ function displayCart() {
     });
   }
 }
-
+// Display the total price
+    const totalPriceElement = document.createElement('div');
+    totalPriceElement.classList.add('total-price');
+    totalPriceElement.innerHTML = `
+      <p>Total Price: $${totalPrice.toFixed(2)}</p>
+    `;
+    cartContainer.appendChild(totalPriceElement);
+  }
+}
 // Function to remove items from the cart
 function removeFromCart(product) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
