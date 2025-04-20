@@ -19,7 +19,7 @@ header {
 }
 
 /* Logo in header */
-header h1 {
+header .logo {
     font-size: 3em;
     color: white;
     margin: 0; /* Ensures there’s no margin around the title */
