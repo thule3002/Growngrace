@@ -38,7 +38,8 @@ function displayCart() {
     });
   }
 }
-// Display the total price
+// Calculate and display total price
+    const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
     const totalPriceElement = document.createElement('div');
     totalPriceElement.classList.add('total-price');
     totalPriceElement.innerHTML = `
@@ -47,10 +48,6 @@ function displayCart() {
     cartContainer.appendChild(totalPriceElement);
   }
 }
-// Call this function on page load
-window.onload = function() {
-  displayOrderSummary();
-};
 
 // Function to remove items from the cart
 function removeFromCart(product) {
@@ -79,18 +76,19 @@ window.onload = function () {
   updateCartCounter();
   displayCart(); // Optionally display cart items on page load
 };
+// Function to calculate total price
+function calculateTotalPrice(cart) {
+  return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+}
+
 // Function to proceed to checkout
 function proceedToCheckout() {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
-  const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  const totalPrice = calculateTotalPrice(cart); // Use the calculateTotalPrice function
 
   // Store cart data and total price in localStorage
   localStorage.setItem('checkoutCart', JSON.stringify(cart));
   localStorage.setItem('totalPrice', totalPrice);
-
-  function calculateTotalPrice(cart) {
-    return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
-}
 
   // Redirect to the order form page
   window.location.href = 'order.html';
