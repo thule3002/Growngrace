@@ -14,12 +14,10 @@ function addToCart(product, price, quantity) {
 
     // Save the updated cart back to localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
+    
     alert(`${product} has been added to your cart!`);
-// Update the cart item counter
-  updateCartCounter();
-  
-  alert(`${product} has been added to your cart!`);
-}
+    updateCartCounter(); // Update the cart counter
+  }
 
 // Function to update the cart counter (number of items in the cart)
 function updateCartCounter() {
