@@ -15,6 +15,7 @@ header {
     display: flex;
     justify-content: space-between;  /* Pushes logo to the left and nav items to the right */
     align-items: center;
+    padding-left: 40px; /* To make the logo slightly indented from the left */
 }
 
 /* Logo in header */
@@ -30,6 +31,7 @@ nav {
     display: flex;
     justify-content: flex-end; /* Align the nav items to the right */
     gap: 20px;  /* Space between navigation items */
+    width: 50%; /* Ensure it takes only a certain portion */
 }
 
 nav a {
