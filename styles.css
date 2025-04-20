@@ -1,111 +1,105 @@
 /* General styles */
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #FFB6C1, #FFFFFF);
-  margin: 0;
-  padding: 0;
-  color: #333;
+    font-family: Arial, sans-serif;
+    background-color: #F5F5DC; /* Beige background */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    padding-left: 20px; /* Added padding to avoid text being too close to the left */
+    padding-right: 20px; /* Added padding to avoid text being too close to the right */
 }
 
+/* Header styles */
 header {
-  background-color: #FFB6C1;
-  padding: 20px;
-  text-align: center;
+    background-color: #FFB6C1; /* Light pink */
+    padding: 20px;
+    text-align: center;
 }
 
 header h1 {
-  font-size: 3em;
-  color: white;
+    font-size: 3em;
+    color: white;
 }
 
 header p {
-  font-size: 1.5em;
-  color: white;
+    font-size: 1.5em;
+    color: white;
 }
 
-.navbar a {
-  text-decoration: none;
-  color: white;
-  margin: 0 15px;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-links {
-  display: flex;
-}
-
+/* Footer styles */
 footer {
-  background-color: #FFB6C1;
-  text-align: center;
-  padding: 10px;
+    background-color: #FFB6C1; /* Light pink */
+    padding: 20px;
+    text-align: center;
+    color: white;
 }
 
 /* Form styles */
-form {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 30px;
-  margin: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-form input, form select, form button {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-}
-
-form button {
-  background-color: #FFB6C1;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #FF99A0;
-}
-/* Cart and Button Styles */
-button {
-    padding: 10px;
-    background-color: #FFB6C1;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #FF99A0;
-}
-
-#cart-container {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
+#order-form {
+    background-color: rgba(255, 255, 255, 0.8); /* Slight white background */
+    padding: 30px;
+    margin: 20px;
     border-radius: 10px;
-    max-width: 800px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.cart-item {
-    margin-bottom: 15px;
+/* Navigation Bar Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #FFB6C1; /* Light pink */
 }
 
-.cart-item button {
-    background-color: #FF99A0;
-    padding: 5px;
+nav a {
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: #ff69b4; /* Slightly darker pink when hovered */
+}
+
+/* General Section Styles for text */
+section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #FF69B4;
+    font-size: 2.5em;
+}
+
+/* Button Styling */
+button {
+    padding: 15px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #FFB6C1; /* Light pink */
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.cart-item button:hover {
-    background-color: #FFB6C1;
+button:hover {
+    background-color: #ff69b4; /* Slightly darker pink when hovered */
+}
+
+/* Cart Badge Styling */
+#cart-badge {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background-color: #ff69b4; /* Light pink */
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    font-weight: bold;
 }
