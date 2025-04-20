@@ -47,6 +47,11 @@ function displayCart() {
     cartContainer.appendChild(totalPriceElement);
   }
 }
+// Call this function on page load
+window.onload = function() {
+  displayOrderSummary();
+};
+
 // Function to remove items from the cart
 function removeFromCart(product) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
