@@ -31,7 +31,7 @@ nav {
     display: flex;
     justify-content: flex-end; /* Align the nav items to the right */
     gap: 20px;  /* Space between navigation items */
-    width: 50%; /* Ensure it takes only a certain portion */
+    width: auto; /* Ensure it takes only a certain portion */
 }
 
 nav a {
