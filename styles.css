@@ -1,22 +1,30 @@
-/* Header styles */
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fefbf7; /* Light beige background */
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
 header {
   background-color: #FFB6C1; /* Light pink */
-  padding: 10px 20px;
-  text-align: left;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to separate from content */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between; /* Distribute space between elements */
+  align-items: center; /* Vertically center the items */
+  position: relative;
 }
 
 header h1 {
   font-size: 2.5em;
   color: white;
   margin-left: 20px;
-  display: inline-block;
 }
 
 header nav {
-  display: inline-block;
-  float: right;
-  padding-top: 10px;
+  display: flex;
+  justify-content: flex-end; /* Align navigation to the right */
 }
 
 header nav a {
@@ -30,38 +38,13 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-/* General styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5; /* Beige background */
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
-
+/* Section styles */
 section {
   padding: 20px;
-  margin: 10px;
-  background-color: #fff; /* White background for content */
+  margin: 20px;
+  background-color: #ffffff; /* White background for content */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow for content */
   border-radius: 8px;
-}
-
-footer {
-  background-color: #FFB6C1; /* Light pink for footer */
-  padding: 15px;
-  text-align: center;
-}
-
-footer p {
-  font-size: 1em;
-  color: white;
-  margin: 0;
-}
-
-/* Additional spacing between elements */
-section h2, footer {
-  margin-bottom: 20px;
 }
 
 /* Form styles */
@@ -85,7 +68,7 @@ input[type="text"], input[type="number"], select {
 }
 
 input[type="submit"] {
-  background-color: #FFB6C1;
+  background-color: #FFB6C1; /* Light pink */
   color: white;
   padding: 12px 20px;
   border: none;
@@ -95,14 +78,27 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #FF99A1;
+  background-color: #FF99A1; /* Hover effect */
+}
+
+/* Footer styles */
+footer {
+  background-color: #FFB6C1; /* Light pink for footer */
+  padding: 15px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1em;
+  color: white;
+  margin: 0;
 }
 
 /* Cart Item number in icon */
 .cart-item-count {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -5px;
+  right: -5px;
   background-color: #FF6347; /* Red-like color for cart badge */
   color: white;
   border-radius: 50%;
