@@ -1,11 +1,18 @@
 /* General styles */
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: Arial, sans-serif;
     background: #f1f1f1; /* Light beige background */
     margin: 0;
     padding: 0;
     color: #333;
     text-align: center;  /* Center align text in the body */
+}
+/* Make sure the main content expands to push the footer down */
+main {
+    flex-grow: 1;
 }
 
 /* Header styles */
@@ -52,6 +59,9 @@ footer {
     background-color: #FFB6C1;  /* Pink footer */
     text-align: center;
     padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%
 }
 
 footer p {
