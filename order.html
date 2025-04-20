@@ -1,45 +1,68 @@
-<h2>Order Form</h2>
-<!-- Order summary displayed here -->
-<div id="order-summary"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Form - Glow & Grace</title>
+  <!-- Correctly link the CSS file -->
   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <a href="index.html" class="logo">Glow & Grace</a>
+      <div class="nav-links">
+        <a href="cart.html">Your Cart</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Our Products</a>
+      </div>
+    </div>
+  </header>
 
-<!-- Total Price Display -->
-<div id="total-price"></div> <!-- This is where the total price will be displayed -->
+  <main>
+    <h2>Order Form</h2>
+    <div id="order-summary">
+    </div>
 
-<!-- Product Information Section (displayed without dropdown) -->
-<div id="product-info"></div> <!-- This is where product and quantity will be displayed -->
+    <form action="submit.asp" method="GET">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+      </div>
 
-<!-- Name Input Field -->
-<div class="form-group">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required>
-</div>
+      <!-- Payment Information -->
+      <div class="payment-info">
+        <h3>Payment Information</h3>
+        <div class="form-group">
+          <label for="credit-card">Credit Card Number:</label>
+          <input type="text" id="credit-card" name="credit-card" required>
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV:</label>
+          <input type="text" id="cvv" name="cvv" required>
+        </div>
+        <div class="form-group">
+          <label for="expiration">Expiration Date:</label>
+          <input type="month" id="expiration" name="expiration" required>
+        </div>
+      </div>
 
-<div class="form-group">
-  <label for="address">Address:</label>
-  <input type="text" id="address" name="address" required>
+      <div class="form-group">
+        <button type="submit" class="submit-btn">Place Order</button>
+      </div>
+    </form>
+  </main>
 
-<!-- Payment Information Section -->
-<div class="payment-info">
-  <h3>Payment Information</h3>
+  <footer>
+    <p>&copy; 2025 Glow & Grace</p>
+  </footer>
 
-  <div class="form-group">
-    <label for="credit-card">Credit Card Number:</label>
-    <input type="text" id="credit-card" name="credit-card" required>
-  </div>
-
-  <div class="form-group">
-    <label for="cvv">CVV:</label>
-    <input type="text" id="cvv" name="cvv" required>
-  </div>
-
-  <div class="form-group">
-    <label for="expiration">Expiration Date:</label>
-    <input type="month" id="expiration" name="expiration" required>
-  </div>
-</div>
-
-<!-- Submit Button -->
-<div class="form-group">
-  <button type="submit" class="submit-btn">Place Order</button>
-</div>
+  <!-- Ensure the script is loaded at the bottom -->
+  <script src="order.js"></script>
+</body>
+</html>
