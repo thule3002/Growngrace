@@ -19,7 +19,7 @@ header {
 
 /* Logo in header */
 header .logo {
-    font-size: 5em;
+    font-size: 9em;
     color: white;
     margin: 0; /* Ensures there’s no margin around the title */
     text-align: center;  /* Aligns the logo to the center */
