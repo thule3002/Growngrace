@@ -13,7 +13,7 @@ header {
     background-color: #FFB6C1;  /* Pink background for header */
     padding: 20px;
     display: flex;
-    justify-content: space-between;  /* Pushes logo to the left and nav items to the right */
+    justify-content: center;  /* Centers the content (logo and nav links)
     align-items: center;
 }
 
@@ -30,7 +30,7 @@ header .logo {
 /* Navigation bar styles */
 .nav-links {
     display: flex;
-    justify-content: flex-end; /* Align the nav items to the right */
+    justify-content: center;
     gap: 20px;  /* Space between navigation items */
     width: auto; /* Ensure it takes only a certain portion */
 }
