@@ -27,14 +27,14 @@ header .logo {
 }
 
 /* Navigation bar styles */
-nav {
+.nav-links {
     display: flex;
     justify-content: flex-end; /* Align the nav items to the right */
     gap: 20px;  /* Space between navigation items */
     width: auto; /* Ensure it takes only a certain portion */
 }
 
-nav a {
+.nav-links a {
     text-decoration: none;
     color: white;
     padding: 10px 20px;
@@ -42,7 +42,7 @@ nav a {
     transition: background 0.3s ease-in-out;
 }
 
-nav a:hover {
+.nav-links a:hover {
     background-color: #F7A6C0;
 }
 
