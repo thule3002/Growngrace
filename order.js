@@ -30,13 +30,18 @@ window.onload = function () {
 
   // Pre-fill the order form with cart details (product names and quantities)
   if (checkoutCart.length > 0) {
-    // Select the first product to pre-fill the fields
-    const product = checkoutCart[0].product;
-    const quantity = checkoutCart[0].quantity;
-
-    // Display product name and quantity directly in the form
+    // Empty out any previous product details
     document.getElementById('name').value = ''; // Empty name field (user to fill out)
-    document.getElementById('product-info').innerHTML = `${product} x ${quantity}`; // Display product name and quantity
-    document.getElementById('total-price').innerHTML = `Total Price: $${totalPrice}`; // Display total price at the top
+    document.getElementById('address').value = ''; // Empty address field (user to fill out)
+  
+    // Pre-fill the product info and quantity for the order form
+    let productDetails = "";
+    checkoutCart.forEach(item => {
+      productDetails += `${item.product} x ${item.quantity} - $${item.price * item.quantity}<br>`;
+    });
+    
+    // Display the product details and total price
+    document.getElementById('product-info').innerHTML = productDetails;
+    document.getElementById('total-price').innerHTML = `Total Price: $${totalPrice}`;
   }
 }
