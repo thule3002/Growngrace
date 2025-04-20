@@ -15,7 +15,6 @@ header {
     display: flex;
     justify-content: space-between;  /* Pushes logo to the left and nav items to the right */
     align-items: center;
-    padding-left: 40px; /* To make the logo slightly indented from the left */
 }
 
 /* Logo in header */
@@ -23,7 +22,7 @@ header .logo {
     font-size: 3em;
     color: white;
     margin: 0; /* Ensures there’s no margin around the title */
-    text-align: left;  /* Aligns the logo to the left */
+    text-align: center;  /* Aligns the logo to the left */
 }
 
 /* Navigation bar styles */
