@@ -12,28 +12,24 @@ body {
 header {
     background-color: #FFB6C1;  /* Pink background for header */
     padding: 20px;
-    text-align: left;  /* Align logo to the left */
     display: flex;
-    justify-content: space-between;  /* Push the navigation to the left */
+    justify-content: space-between;  /* Pushes logo to the left and nav items to the right */
     align-items: center;
 }
 
+/* Logo in header */
 header h1 {
     font-size: 3em;
     color: white;
+    margin: 0; /* Ensures there’s no margin around the title */
+    text-align: left;  /* Aligns the logo to the left */
 }
 
-header p {
-    font-size: 1.5em;
-    color: white;
-}
-
+/* Navigation bar styles */
 nav {
     display: flex;
-    justify-content: flex-start; /* Align the nav items to the left */
-    gap: 20px;  /* Add space between the items */
-    font-size: 1.2em;
-    color: white;
+    justify-content: flex-end; /* Align the nav items to the right */
+    gap: 20px;  /* Space between navigation items */
 }
 
 nav a {
